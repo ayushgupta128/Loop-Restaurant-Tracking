@@ -1,4 +1,4 @@
-Video Demonstration of this project: https://drive.google.com/file/d/1OUh89EXESOswbHMYBkhAm9RFGVtH1ysR/view?usp=drive_web
+**Video Demonstration of this project: https://drive.google.com/file/d/1OUh89EXESOswbHMYBkhAm9RFGVtH1ysR/view?usp=drive_web
 
 The Database used in this proect is MySQL DB - version 8.0.
 
@@ -10,7 +10,7 @@ pandas is used to generate final dataframe and output it as html template in /ge
 
 There are 4 main modules in this Project
 
-1) API_Endpoint.py:
+**1) API_Endpoint.py:**
 Backend API is created using Flask in this module
 a. /trigger_report endpoint that will trigger report generation from the data provided (stored in mysql DB)
     1. No input 
@@ -32,7 +32,7 @@ b. /get_report/<string: report_id> endpoint that will return the status of the r
               Check if the status of report_id is "{db}.{table}" format then return Report status as "Complete" plus final csv data in html format to the response of "/get_report/<string: report_id>" endpoint 
 
 
-2) loop.py:
+**2) loop.py:**
 Spark is used to do computation on data.
 
 The data computation using spark is performed in this module to generate output data.
@@ -46,10 +46,10 @@ The data computation using spark is performed in this module to generate output 
 - The data is then aggregated by store_id to compute uptime and downtime for Last Hour, Last Day and Last Week in minutes, hour and hour respectively.
 - The status of the generated random report_id is changed from "Running" to "reportdb.{report_id}_info_data" in mysql db database "reportdb" and table "report_status"
 
-3) app-config.properties:
+**3) app-config.properties:**
 This file contain MySQL DB connection properties to avoid hard-coding of sensitive information in main code.
 
-4) templates/table.html:
+**4) templates/table.html:**
 This html file contain the output html template of data which has to be shown to user when they hit /get_report/<string: report_id> endpoint.
 
 
