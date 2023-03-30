@@ -11,7 +11,7 @@ pandas is used to generate final dataframe and output it as html template in /ge
 There are 4 main modules in this Project
 
 **1) API_Endpoint.py:**
-Backend API is created using Flask in this module
+Backend API is created using Flask application in this module.
 a. /trigger_report endpoint that will trigger report generation from the data provided (stored in mysql DB)
     1. No input 
     2. Output - report_id (random string is generated using python random library) 
