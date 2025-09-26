@@ -1,0 +1,249 @@
+name: HelloWorld
+description: ''
+version: 0.0.1-SNAPSHOT
+author: null
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: helloworld
+  parentArtefactID: ''
+  buildSystem: wheel
+  author: null
+  createdAt: '2025-05-28 15:35:10'
+pipelines:
+  pipelines/customers_orders:
+    name: customers_orders
+    description: Aggregates total spending's for each customer
+    author: g.ayush@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-05-28 15:35:11'
+    datasets:
+      inputs:
+      - datasets/orders
+      - datasets/customers
+      outputs:
+      - datasets/customers_orders
+    subgraphs: []
+    dependencies: {}
+  pipelines/report_top_customers:
+    name: report_top_customers
+    description: Prepare a report based on customers' spending
+    author: g.ayush@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-05-28 15:35:11'
+    datasets:
+      inputs:
+      - datasets/customers_orders
+      outputs:
+      - datasets/report
+    subgraphs: []
+    dependencies: {}
+  pipelines/join_agg_sort:
+    name: join_agg_sort
+    description: Show an example of joining two datasets (customers and orders), aggregating
+      (sales by customer), sorting (by totals)
+    author: g.ayush@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-05-28 15:35:11'
+    datasets:
+      inputs:
+      - datasets/orders
+      - datasets/customers
+      outputs:
+      - datasets/customer_totals
+    subgraphs: []
+    dependencies: {}
+  pipelines/farmers-markets-irs:
+    name: farmers-markets-irs
+    description: Exploration of Farmer's Market Locations By US Zip Code
+    author: g.ayush@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-05-28 15:35:11'
+    datasets:
+      inputs:
+      - datasets/irs-zipcode-data
+      - datasets/farmers-markets
+      outputs:
+      - datasets/farmers_market_tax_report
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/report:
+    name: report
+    description: Final report for the bank
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/customer_totals:
+    name: customer_totals
+    description: Customers by total of their purchases
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/orders:
+    name: orders
+    description: All the orders placed by the customers
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/customers:
+    name: customers
+    description: All the customers
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/customers_orders:
+    name: customers_orders
+    description: Customers by total of their purchases
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/old_events:
+    name: old_events
+    description: Old events data
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:10'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:10'
+  datasets/historic_events_flat:
+    name: historic_events_flat
+    description: Historic events flat
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:11'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:11'
+  datasets/farmers-markets:
+    name: farmers-markets
+    description: Farmer's Market data
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:11'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:11'
+  datasets/irs-zipcode-data:
+    name: irs-zipcode-data
+    description: Irs zipcode data
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:11'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:11'
+  datasets/farmers_market_tax_report:
+    name: farmers_market_tax_report
+    description: Farmer's market tax report
+    author: g.ayush@prophecy.io
+    createdAt: '2025-05-28 15:35:11'
+    mode: batch
+    physicalDatasets:
+      workshop-fabric:
+        fabricId: 27298
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2025-05-28 15:35:11'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-05-28 15:35:10'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- modifiedAt: '2025-05-28T15:35:10.570815Z'
+  name: plibMaven
+  version: 8.9.0
+  id: '250329894'
+  createdAt: '2025-05-28T15:35:10.570815Z'
+  type: plibMaven
+- modifiedAt: '2025-05-28T15:35:10.570815Z'
+  name: plibPypi
+  version: 1.9.49
+  id: '339285'
+  createdAt: '2025-05-28T15:35:10.570815Z'
+  type: plibPypi
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
