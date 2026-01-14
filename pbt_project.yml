@@ -1,0 +1,51 @@
+name: test_p
+description: ''
+version: 0.0.1
+author: g.ayush@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2026-01-14 03:08:39'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: g.ayush@prophecy.io
+  createdAt: '2026-01-14 03:08:39'
+dependencies: []
+projectDependencies:
+  '78064':
+    projectUID: 78064
+    projectName: prophecy_basics
+    repositoryPath: gitUri=https://github.com/prophecy-io/prophecy-basics&subPath=
+    version: 1.0.6
+    isDefault: true
+    author: null
+    createdAt: '2026-01-14 03:08:11'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: false
+pipelineConfigurations: {}
+projectConfigurations: {}
