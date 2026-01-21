@@ -26,9 +26,41 @@ subgraphs: {}
 sqlModels: {}
 sqlSnapshots: {}
 sqlTests: {}
-sqlMacros: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-01-20 04:36:44'
 sqlSeeds: {}
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/ayush_demos_demos:
+    name: ayush_demos_demos
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-01-20 04:44:22'
+    tables:
+    - name: klp
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: name
+          dataType:
+            type: String
+        - name: row_origin
+          dataType:
+            type: String
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-01-20 04:44:22'
+      tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
@@ -49,3 +81,23 @@ flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
 projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/p1:
+    name: p1
+    schema: null
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - .prophecy/ide/pipelines/p1.json
+    - pipelines/p1.py
+    createdAt: '2026-01-20 04:36:44'
+  .prophecy/metadata/sqlorchestratorpipeline/p2:
+    name: p2
+    schema: null
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - pipelines/p2.py
+    - .prophecy/ide/pipelines/p2.json
+    createdAt: '2026-01-20 04:36:58'
+sqlBusinessApps: {}

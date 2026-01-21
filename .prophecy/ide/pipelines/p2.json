@@ -1,0 +1,51 @@
+{
+  "id" : "p2",
+  "metainfo" : {
+    "label" : "p2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false
+  },
+  "processes" : {
+    "ikwpez6AwLMXSFZyUVaq-$$MCkDEXC8tQSPB5I4uw__o" : {
+      "id" : "ikwpez6AwLMXSFZyUVaq-$$MCkDEXC8tQSPB5I4uw__o",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "trigger_p1_pipeline",
+        "x" : -220,
+        "y" : -160,
+        "phase" : 0,
+        "comment" : "Runs the p1 pipeline to automate data processing tasks.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "maxTriggers" : 10000,
+        "triggerCondition" : "Always",
+        "enableMaxTriggers" : false,
+        "pipelineName" : "p1",
+        "parameterSet" : "default",
+        "parameters" : { }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UwZGuyzDVVADhEwx5kLqE$$qDbnp8VdqdmZgfXgl8U_Q",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "FDjViLTtY50jSJb4ALCfM$$-2HJ7L4-bKtKFb5RMG0aD",
+          "slug" : "out0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

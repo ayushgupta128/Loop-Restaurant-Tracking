@@ -1,0 +1,126 @@
+{
+  "id" : "p1",
+  "metainfo" : {
+    "label" : "p1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false
+  },
+  "processes" : {
+    "aZLMYpW17rfJpAwJzltVd" : {
+      "id" : "aZLMYpW17rfJpAwJzltVd",
+      "component" : "OrchestrationSource",
+      "kind" : "DatabricksSource",
+      "metadata" : {
+        "label" : "people_0",
+        "x" : -700,
+        "y" : -420,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "provider" : "",
+            "clientId" : "",
+            "oAuthType" : "u2m",
+            "kgConfig" : {
+              "authProperties" : {
+                "authType" : "oauth",
+                "clientId" : "",
+                "oAuthAppRegistrationID" : "",
+                "oAuthType" : "u2m"
+              },
+              "kgSchedule" : { },
+              "useConnectorAuth" : true
+            },
+            "authType" : "pat",
+            "id" : "databricks_2",
+            "oAuthAppRegistrationID" : ""
+          },
+          "type" : "connector"
+        },
+        "format" : {
+          "kind" : "databricks",
+          "properties" : {
+            "schema" : {
+              "fields" : [ {
+                "name" : "name",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              }, {
+                "name" : "row_origin",
+                "dataType" : {
+                  "type" : "utf8"
+                }
+              } ],
+              "providerType" : "arrow"
+            }
+          }
+        },
+        "properties" : {
+          "tableFullName" : {
+            "database" : "ayush_demos",
+            "name" : "people",
+            "schema" : "demos"
+          }
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "4ebb8a59-428c-4c48-b8d0-f367323c433e",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO" : {
+      "id" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "entity_name_origin",
+        "x" : -500,
+        "y" : -440,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "klp",
+          "sourceType" : "Table",
+          "sourceName" : "ayush_demos_demos",
+          "alias" : ""
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "V1BEHZWxWuLuBx1QGiRKl$$3wNfZScUJoGYSRwHIz-PD",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "thniQIxJrPXsZKRm_HzCB$$mh75-1hz6WGoYADQkMyBB",
+    "source" : "aZLMYpW17rfJpAwJzltVd",
+    "sourcePort" : "4ebb8a59-428c-4c48-b8d0-f367323c433e",
+    "target" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
+    "targetPort" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk"
+  } ],
+  "component" : "Pipeline"
+}

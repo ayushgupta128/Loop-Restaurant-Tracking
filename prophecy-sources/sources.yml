@@ -1,0 +1,19 @@
+---
+version: 2
+sources:
+- name: "ayush_demos_demos"
+  database: "ayush_demos"
+  schema: "demos"
+  tables:
+  - name: "klp"
+    config:
+      tags:
+      - "pipeline:p1"
+    columns:
+    - name: "name"
+      dataType:
+        type: "String"
+    - name: "row_origin"
+      dataType:
+        type: "String"
+    type: "table"
