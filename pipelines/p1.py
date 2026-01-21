@@ -25,4 +25,8 @@ with DAG():
         ), 
         tableFullName = {"database" : "ayush_demos", "name" : "people", "schema" : "demos"}
     )
-    p1__filtered_names = Task(task_id = "p1__filtered_names", component = "Model", modelName = "p1__filtered_names")
+    p1__entity_name_filter = Task(
+        task_id = "p1__entity_name_filter", 
+        component = "Model", 
+        modelName = "p1__entity_name_filter"
+    )

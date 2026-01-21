@@ -13,9 +13,9 @@
     "isTranspiledPipeline" : false,
     "publishDiagnosticMetrics" : false,
     "processesVsModelFiles" : {
-      "filtered_names##Z1R2Zf2r" : "models/p1/p1__filtered_names.sql",
-      "filtered_names_iUSGODMF" : "models/p1/p1__filtered_names.sql",
-      "entity_name_orig##eixdMBQI" : "models/p1/p1__filtered_names.sql"
+      "v9_y8abWzHLMKDVrysswr$$f5gIvreaRjmGhqYegsQxl" : "models/p1/p1__entity_name_filter.sql",
+      "entity_name_orig##eixdMBQI" : "models/p1/p1__entity_name_filter.sql",
+      "entity_name_filter_HDiu0OJFfF1RkuNgMXYRc$$d6HHp9fHhHwdPfVeZrCc0" : "models/p1/p1__entity_name_filter.sql"
     }
   },
   "processes" : {
@@ -119,36 +119,30 @@
       },
       "index" : 1
     },
-    "filtered_names##Z1R2Zf2r" : {
-      "id" : "filtered_names##Z1R2Zf2r",
-      "component" : "Reformat",
+    "v9_y8abWzHLMKDVrysswr$$f5gIvreaRjmGhqYegsQxl" : {
+      "id" : "v9_y8abWzHLMKDVrysswr$$f5gIvreaRjmGhqYegsQxl",
+      "component" : "Filter",
       "metadata" : {
-        "label" : "filtered_names",
-        "x" : 220,
-        "y" : 20,
-        "phase" : 0
+        "label" : "entity_name_filter",
+        "x" : 260,
+        "y" : 0,
+        "phase" : 0,
+        "comment" : "Finds records for individuals named Ayush or Gupta.",
+        "autoUpdateComment" : true
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "expressions" : [ {
-          "expression" : {
-            "expression" : "name"
-          },
-          "_row_id" : "1384225269"
-        }, {
-          "expression" : {
-            "expression" : "row_origin"
-          },
-          "_row_id" : "265867321"
-        } ]
+        "columnsSelector" : [ "Bz9ZviirUAoEriJQdfh5l$$7uLA8wP6IwTeltDZUWZMM##name" ],
+        "condition" : {
+          "expression" : "name = 'Ayush' OR name = 'Gupta'"
+        }
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "luxkxM8r",
-          "slug" : "entity_name_origin"
+          "id" : "Bz9ZviirUAoEriJQdfh5l$$7uLA8wP6IwTeltDZUWZMM",
+          "slug" : "in0"
         } ],
         "outputs" : [ {
-          "id" : "iUSGODMF",
+          "id" : "HDiu0OJFfF1RkuNgMXYRc$$d6HHp9fHhHwdPfVeZrCc0",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -156,11 +150,11 @@
     }
   },
   "connections" : [ {
-    "id" : "AwmrLyk0",
+    "id" : "9qep79o5rPrgFsnxtW_CV$$IlqmUr5yT5LZUzuHKMJ3G",
     "source" : "entity_name_orig##eixdMBQI",
     "sourcePort" : "xBt5lU8a",
-    "target" : "filtered_names##Z1R2Zf2r",
-    "targetPort" : "luxkxM8r"
+    "target" : "v9_y8abWzHLMKDVrysswr$$f5gIvreaRjmGhqYegsQxl",
+    "targetPort" : "Bz9ZviirUAoEriJQdfh5l$$7uLA8wP6IwTeltDZUWZMM"
   } ],
   "component" : "Pipeline"
 }

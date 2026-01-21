@@ -1,6 +1,6 @@
 ---
 version: 2
 models:
-- name: "p1__filtered_names"
+- name: "p1__entity_name_filter"
   tags:
   - "prophecy_temp"

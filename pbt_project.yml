@@ -91,7 +91,7 @@ sqlOrchestratorPipelines:
     - .prophecy/ide/pipelines/p1.json
     - pipelines/p1.py
     - models/p1/schema.yml
-    - models/p1/p1__filtered_names.sql
+    - models/p1/p1__entity_name_filter.sql
     createdAt: '2026-01-20 04:36:44'
   .prophecy/metadata/sqlorchestratorpipeline/p2:
     name: p2
