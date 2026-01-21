@@ -14,14 +14,23 @@ WITH entity_name_origin AS (
 
 ),
 
-entity_name_filter AS (
+gupta_name_filter AS (
 
-  {#Finds records for individuals named Ayush or Gupta.#}
   SELECT * 
   
   FROM entity_name_origin AS in0
   
-  WHERE name = 'Ayush' OR name = 'Gupta'
+  WHERE name = 'Gupta'
+
+),
+
+entity_name_filter AS (
+
+  SELECT 
+    name,
+    row_origin
+  
+  FROM gupta_name_filter AS in0
 
 )
 
