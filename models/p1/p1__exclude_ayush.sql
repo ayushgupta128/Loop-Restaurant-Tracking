@@ -22,8 +22,18 @@ filter_name_ayush AS (
   
   WHERE name = 'Ayush'
 
+),
+
+exclude_ayush AS (
+
+  SELECT * 
+  
+  FROM filter_name_ayush
+  
+  WHERE name <> 'Ayush'
+
 )
 
 SELECT *
 
-FROM filter_name_ayush
+FROM exclude_ayush

@@ -13,9 +13,10 @@
     "isTranspiledPipeline" : false,
     "publishDiagnosticMetrics" : false,
     "processesVsModelFiles" : {
-      "filter_name_ayus##xFO1U6Wq" : "models/p1/p1__filter_name_ayush.sql",
-      "filter_name_ayush_qNYEBio4" : "models/p1/p1__filter_name_ayush.sql",
-      "entity_name_orig##Bfo1bH1E" : "models/p1/p1__filter_name_ayush.sql"
+      "exclude_ayush_oVMwJp0h" : "models/p1/p1__exclude_ayush.sql",
+      "entity_name_orig##dCg8CLQI" : "models/p1/p1__exclude_ayush.sql",
+      "filter_name_ayus##iPRliwCF" : "models/p1/p1__exclude_ayush.sql",
+      "exclude_ayush##pRPCJfQT" : "models/p1/p1__exclude_ayush.sql"
     }
   },
   "processes" : {
@@ -82,34 +83,34 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "I4wzOVa9",
+          "id" : "QEztzxL4",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
     },
-    "filter_name_ayus##xFO1U6Wq" : {
-      "id" : "filter_name_ayus##xFO1U6Wq",
+    "exclude_ayush##pRPCJfQT" : {
+      "id" : "exclude_ayush##pRPCJfQT",
       "component" : "Model",
       "metadata" : {
-        "label" : "p1__filter_name_ayush",
+        "label" : "p1__exclude_ayush",
         "phase" : 0
       },
       "properties" : {
-        "modelName" : "p1__filter_name_ayush"
+        "modelName" : "p1__exclude_ayush"
       },
       "visualMetaInfo" : {
-        "visualProcessIds" : [ "filter_name_ayush_qNYEBio4", "filter_name_ayus##xFO1U6Wq", "entity_name_orig##Bfo1bH1E" ],
+        "visualProcessIds" : [ "exclude_ayush_oVMwJp0h", "exclude_ayush##pRPCJfQT", "filter_name_ayus##iPRliwCF", "entity_name_orig##dCg8CLQI" ],
         "type" : "ephemeral",
         "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "p1__filter_name_ayush_in_0",
+          "id" : "p1__exclude_ayush_in_0",
           "slug" : "in_0"
         } ],
         "outputs" : [ {
-          "id" : "p1__filter_name_ayush_out_0",
+          "id" : "p1__exclude_ayush_out_0",
           "slug" : "out_0"
         } ],
         "isCustomOutputSchema" : false
