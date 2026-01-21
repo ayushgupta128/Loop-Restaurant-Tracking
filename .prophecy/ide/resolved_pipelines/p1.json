@@ -11,7 +11,12 @@
       }
     },
     "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "filter_name_ayus##xFO1U6Wq" : "models/p1/p1__filter_name_ayush.sql",
+      "filter_name_ayush_qNYEBio4" : "models/p1/p1__filter_name_ayush.sql",
+      "entity_name_orig##Bfo1bH1E" : "models/p1/p1__filter_name_ayush.sql"
+    }
   },
   "processes" : {
     "people_0##FDaJ4XPl" : {
@@ -77,41 +82,35 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "KAWTwpc8",
+          "id" : "I4wzOVa9",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
-      },
-      "index" : 0
+      }
     },
-    "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO" : {
-      "id" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-      "component" : "Dataset",
+    "filter_name_ayus##xFO1U6Wq" : {
+      "id" : "filter_name_ayus##xFO1U6Wq",
+      "component" : "Model",
       "metadata" : {
-        "label" : "entity_name_origin",
-        "x" : -20,
-        "y" : 20,
+        "label" : "p1__filter_name_ayush",
         "phase" : 0
       },
       "properties" : {
-        "table" : {
-          "name" : "klp",
-          "sourceType" : "Table",
-          "sourceName" : "ayush_demos_demos",
-          "alias" : ""
-        },
-        "writeOptions" : {
-          "writeMode" : "overwrite"
-        }
+        "modelName" : "p1__filter_name_ayush"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "filter_name_ayush_qNYEBio4", "filter_name_ayus##xFO1U6Wq", "entity_name_orig##Bfo1bH1E" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk",
-          "slug" : "in"
+          "id" : "p1__filter_name_ayush_in_0",
+          "slug" : "in_0"
         } ],
         "outputs" : [ {
-          "id" : "V1BEHZWxWuLuBx1QGiRKl$$3wNfZScUJoGYSRwHIz-PD",
-          "slug" : "out"
+          "id" : "p1__filter_name_ayush_out_0",
+          "slug" : "out_0"
         } ],
         "isCustomOutputSchema" : false
       }

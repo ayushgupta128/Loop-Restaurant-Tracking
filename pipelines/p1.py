@@ -25,9 +25,8 @@ with DAG():
         ), 
         tableFullName = {"database" : "ayush_demos", "name" : "people", "schema" : "demos"}
     )
-    entity_name_origin = Task(
-        task_id = "entity_name_origin", 
-        component = "Dataset", 
-        table = {"name" : "klp", "sourceType" : "Table", "sourceName" : "ayush_demos_demos", "alias" : ""}, 
-        writeOptions = {"writeMode" : "overwrite"}
+    p1__filter_name_ayush = Task(
+        task_id = "p1__filter_name_ayush", 
+        component = "Model", 
+        modelName = "p1__filter_name_ayush"
     )

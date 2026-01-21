@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "p1__filter_name_ayush"
+  tags:
+  - "prophecy_temp"

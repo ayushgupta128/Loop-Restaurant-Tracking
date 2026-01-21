@@ -11,7 +11,12 @@
       }
     },
     "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "filter_name_ayus##xFO1U6Wq" : "models/p1/p1__filter_name_ayush.sql",
+      "filter_name_ayush_qNYEBio4" : "models/p1/p1__filter_name_ayush.sql",
+      "entity_name_orig##Bfo1bH1E" : "models/p1/p1__filter_name_ayush.sql"
+    }
   },
   "processes" : {
     "people_0##FDaJ4XPl" : {
@@ -77,15 +82,14 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "KAWTwpc8",
+          "id" : "I4wzOVa9",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
-      },
-      "index" : 0
+      }
     },
-    "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO" : {
-      "id" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
+    "entity_name_orig##Bfo1bH1E" : {
+      "id" : "entity_name_orig##Bfo1bH1E",
       "component" : "Dataset",
       "metadata" : {
         "label" : "entity_name_origin",
@@ -105,18 +109,49 @@
         }
       },
       "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "gx7ijwgU",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 1
+    },
+    "filter_name_ayus##xFO1U6Wq" : {
+      "id" : "filter_name_ayus##xFO1U6Wq",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_name_ayush",
+        "x" : 180,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "name = 'Ayush'"
+        }
+      },
+      "ports" : {
         "inputs" : [ {
-          "id" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk",
-          "slug" : "in"
+          "id" : "huyNgYLr",
+          "slug" : "entity_name_origin"
         } ],
         "outputs" : [ {
-          "id" : "V1BEHZWxWuLuBx1QGiRKl$$3wNfZScUJoGYSRwHIz-PD",
+          "id" : "qNYEBio4",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
     }
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "aLOdUcLi",
+    "source" : "entity_name_orig##Bfo1bH1E",
+    "sourcePort" : "gx7ijwgU",
+    "target" : "filter_name_ayus##xFO1U6Wq",
+    "targetPort" : "huyNgYLr"
+  } ],
   "component" : "Pipeline"
 }

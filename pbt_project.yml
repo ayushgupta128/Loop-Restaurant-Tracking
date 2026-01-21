@@ -90,6 +90,8 @@ sqlOrchestratorPipelines:
     files:
     - .prophecy/ide/pipelines/p1.json
     - pipelines/p1.py
+    - models/p1/p1__filter_name_ayush.sql
+    - models/p1/schema.yml
     createdAt: '2026-01-20 04:36:44'
   .prophecy/metadata/sqlorchestratorpipeline/p2:
     name: p2
