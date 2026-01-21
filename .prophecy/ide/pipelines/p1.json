@@ -14,8 +14,8 @@
     "publishDiagnosticMetrics" : false
   },
   "processes" : {
-    "aZLMYpW17rfJpAwJzltVd" : {
-      "id" : "aZLMYpW17rfJpAwJzltVd",
+    "people_0##FDaJ4XPl" : {
+      "id" : "people_0##FDaJ4XPl",
       "component" : "OrchestrationSource",
       "kind" : "DatabricksSource",
       "metadata" : {
@@ -77,18 +77,18 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "4ebb8a59-428c-4c48-b8d0-f367323c433e",
-          "slug" : "out0"
-        } ]
-      }
+          "id" : "KAWTwpc8",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 0
     },
     "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO" : {
       "id" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
       "component" : "Dataset",
       "metadata" : {
         "label" : "entity_name_origin",
-        "x" : -500,
-        "y" : -440,
         "phase" : 0
       },
       "properties" : {
@@ -113,12 +113,44 @@
         } ],
         "isCustomOutputSchema" : false
       }
+    },
+    "filter_name_ayus##WKPdNwLy" : {
+      "id" : "filter_name_ayus##WKPdNwLy",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_name_ayush",
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "expression" : "name = 'Ayush'"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bZpSLVHk",
+          "slug" : "entity_name_origin"
+        } ],
+        "outputs" : [ {
+          "id" : "EZynpdLw",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "index" : 2
     }
   },
   "connections" : [ {
-    "id" : "thniQIxJrPXsZKRm_HzCB$$mh75-1hz6WGoYADQkMyBB",
-    "source" : "aZLMYpW17rfJpAwJzltVd",
-    "sourcePort" : "4ebb8a59-428c-4c48-b8d0-f367323c433e",
+    "id" : "ttehH1HY",
+    "source" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
+    "sourcePort" : "SAaD1BOO",
+    "target" : "filter_name_ayus##WKPdNwLy",
+    "targetPort" : "bZpSLVHk"
+  }, {
+    "id" : "cHQMLhU7RVAbTbp",
+    "source" : "filter_name_ayus##WKPdNwLy",
+    "sourcePort" : "EZynpdLw",
     "target" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
     "targetPort" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk"
   } ],
