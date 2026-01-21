@@ -13,15 +13,14 @@
     "isTranspiledPipeline" : false,
     "publishDiagnosticMetrics" : false,
     "processesVsModelFiles" : {
-      "exclude_ayush_oVMwJp0h" : "models/p1/p1__exclude_ayush.sql",
-      "entity_name_orig##dCg8CLQI" : "models/p1/p1__exclude_ayush.sql",
-      "filter_name_ayus##iPRliwCF" : "models/p1/p1__exclude_ayush.sql",
-      "exclude_ayush##pRPCJfQT" : "models/p1/p1__exclude_ayush.sql"
+      "filtered_names##Z1R2Zf2r" : "models/p1/p1__filtered_names.sql",
+      "filtered_names_iUSGODMF" : "models/p1/p1__filtered_names.sql",
+      "entity_name_orig##eixdMBQI" : "models/p1/p1__filtered_names.sql"
     }
   },
   "processes" : {
-    "people_0##FDaJ4XPl" : {
-      "id" : "people_0##FDaJ4XPl",
+    "people_0##V6ARjYRp" : {
+      "id" : "people_0##V6ARjYRp",
       "component" : "OrchestrationSource",
       "kind" : "DatabricksSource",
       "metadata" : {
@@ -83,18 +82,19 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "QEztzxL4",
+          "id" : "FNWAvpAn",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
-      }
+      },
+      "index" : 0
     },
-    "entity_name_orig##dCg8CLQI" : {
-      "id" : "entity_name_orig##dCg8CLQI",
+    "entity_name_orig##eixdMBQI" : {
+      "id" : "entity_name_orig##eixdMBQI",
       "component" : "Dataset",
       "metadata" : {
         "label" : "entity_name_origin",
-        "x" : -20,
+        "x" : 20,
         "y" : 20,
         "phase" : 0
       },
@@ -112,62 +112,43 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "cTPJ0DqH",
+          "id" : "xBt5lU8a",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       },
       "index" : 1
     },
-    "filter_name_ayus##iPRliwCF" : {
-      "id" : "filter_name_ayus##iPRliwCF",
-      "component" : "Filter",
+    "filtered_names##Z1R2Zf2r" : {
+      "id" : "filtered_names##Z1R2Zf2r",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "filter_name_ayush",
-        "x" : 180,
+        "label" : "filtered_names",
+        "x" : 220,
         "y" : 20,
         "phase" : 0
       },
       "properties" : {
         "columnsSelector" : [ ],
-        "condition" : {
-          "expression" : "name = 'Ayush'"
-        }
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "name"
+          },
+          "_row_id" : "1384225269"
+        }, {
+          "expression" : {
+            "expression" : "row_origin"
+          },
+          "_row_id" : "265867321"
+        } ]
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "XTf56Lq3",
+          "id" : "luxkxM8r",
           "slug" : "entity_name_origin"
         } ],
         "outputs" : [ {
-          "id" : "fafdkrGd",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "exclude_ayush##pRPCJfQT" : {
-      "id" : "exclude_ayush##pRPCJfQT",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "exclude_ayush",
-        "x" : 380,
-        "y" : 20,
-        "phase" : 0
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "expression" : "name <> 'Ayush'"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "a3taIJRJ",
-          "slug" : "filter_name_ayush"
-        } ],
-        "outputs" : [ {
-          "id" : "oVMwJp0h",
+          "id" : "iUSGODMF",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -175,17 +156,11 @@
     }
   },
   "connections" : [ {
-    "id" : "fxMUlF7o",
-    "source" : "entity_name_orig##dCg8CLQI",
-    "sourcePort" : "cTPJ0DqH",
-    "target" : "filter_name_ayus##iPRliwCF",
-    "targetPort" : "XTf56Lq3"
-  }, {
-    "id" : "Zbcp8Z3n",
-    "source" : "filter_name_ayus##iPRliwCF",
-    "sourcePort" : "fafdkrGd",
-    "target" : "exclude_ayush##pRPCJfQT",
-    "targetPort" : "a3taIJRJ"
+    "id" : "AwmrLyk0",
+    "source" : "entity_name_orig##eixdMBQI",
+    "sourcePort" : "xBt5lU8a",
+    "target" : "filtered_names##Z1R2Zf2r",
+    "targetPort" : "luxkxM8r"
   } ],
   "component" : "Pipeline"
 }

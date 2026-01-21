@@ -1,6 +1,6 @@
 ---
 version: 2
 models:
-- name: "p1__exclude_ayush"
+- name: "p1__filtered_names"
   tags:
   - "prophecy_temp"

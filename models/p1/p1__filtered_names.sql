@@ -14,26 +14,16 @@ WITH entity_name_origin AS (
 
 ),
 
-filter_name_ayush AS (
+filtered_names AS (
 
-  SELECT * 
+  SELECT 
+    name,
+    row_origin
   
   FROM entity_name_origin
-  
-  WHERE name = 'Ayush'
-
-),
-
-exclude_ayush AS (
-
-  SELECT * 
-  
-  FROM filter_name_ayush
-  
-  WHERE name <> 'Ayush'
 
 )
 
 SELECT *
 
-FROM exclude_ayush
+FROM filtered_names

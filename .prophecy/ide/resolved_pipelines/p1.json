@@ -13,15 +13,14 @@
     "isTranspiledPipeline" : false,
     "publishDiagnosticMetrics" : false,
     "processesVsModelFiles" : {
-      "exclude_ayush_oVMwJp0h" : "models/p1/p1__exclude_ayush.sql",
-      "entity_name_orig##dCg8CLQI" : "models/p1/p1__exclude_ayush.sql",
-      "filter_name_ayus##iPRliwCF" : "models/p1/p1__exclude_ayush.sql",
-      "exclude_ayush##pRPCJfQT" : "models/p1/p1__exclude_ayush.sql"
+      "filtered_names##Z1R2Zf2r" : "models/p1/p1__filtered_names.sql",
+      "filtered_names_iUSGODMF" : "models/p1/p1__filtered_names.sql",
+      "entity_name_orig##eixdMBQI" : "models/p1/p1__filtered_names.sql"
     }
   },
   "processes" : {
-    "people_0##FDaJ4XPl" : {
-      "id" : "people_0##FDaJ4XPl",
+    "people_0##V6ARjYRp" : {
+      "id" : "people_0##V6ARjYRp",
       "component" : "OrchestrationSource",
       "kind" : "DatabricksSource",
       "metadata" : {
@@ -83,34 +82,35 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "QEztzxL4",
+          "id" : "FNWAvpAn",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
-      }
+      },
+      "index" : 0
     },
-    "exclude_ayush##pRPCJfQT" : {
-      "id" : "exclude_ayush##pRPCJfQT",
+    "filtered_names##Z1R2Zf2r" : {
+      "id" : "filtered_names##Z1R2Zf2r",
       "component" : "Model",
       "metadata" : {
-        "label" : "p1__exclude_ayush",
+        "label" : "p1__filtered_names",
         "phase" : 0
       },
       "properties" : {
-        "modelName" : "p1__exclude_ayush"
+        "modelName" : "p1__filtered_names"
       },
       "visualMetaInfo" : {
-        "visualProcessIds" : [ "exclude_ayush_oVMwJp0h", "exclude_ayush##pRPCJfQT", "filter_name_ayus##iPRliwCF", "entity_name_orig##dCg8CLQI" ],
+        "visualProcessIds" : [ "filtered_names_iUSGODMF", "filtered_names##Z1R2Zf2r", "entity_name_orig##eixdMBQI" ],
         "type" : "ephemeral",
         "isTemporaryTable" : true
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "p1__exclude_ayush_in_0",
+          "id" : "p1__filtered_names_in_0",
           "slug" : "in_0"
         } ],
         "outputs" : [ {
-          "id" : "p1__exclude_ayush_out_0",
+          "id" : "p1__filtered_names_out_0",
           "slug" : "out_0"
         } ],
         "isCustomOutputSchema" : false
