@@ -20,8 +20,8 @@
       "kind" : "DatabricksSource",
       "metadata" : {
         "label" : "people_0",
-        "x" : -700,
-        "y" : -420,
+        "x" : 20,
+        "y" : 220,
         "phase" : 0
       },
       "properties" : {
@@ -89,6 +89,8 @@
       "component" : "Dataset",
       "metadata" : {
         "label" : "entity_name_origin",
+        "x" : -20,
+        "y" : 20,
         "phase" : 0
       },
       "properties" : {
@@ -113,46 +115,8 @@
         } ],
         "isCustomOutputSchema" : false
       }
-    },
-    "filter_name_ayus##WKPdNwLy" : {
-      "id" : "filter_name_ayus##WKPdNwLy",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "filter_name_ayush",
-        "phase" : 0
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "expression" : "name = 'Ayush'"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "bZpSLVHk",
-          "slug" : "entity_name_origin"
-        } ],
-        "outputs" : [ {
-          "id" : "EZynpdLw",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 2
     }
   },
-  "connections" : [ {
-    "id" : "ttehH1HY",
-    "source" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-    "sourcePort" : "SAaD1BOO",
-    "target" : "filter_name_ayus##WKPdNwLy",
-    "targetPort" : "bZpSLVHk"
-  }, {
-    "id" : "cHQMLhU7RVAbTbp",
-    "source" : "filter_name_ayus##WKPdNwLy",
-    "sourcePort" : "EZynpdLw",
-    "target" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-    "targetPort" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk"
-  } ],
+  "connections" : [ ],
   "component" : "Pipeline"
 }

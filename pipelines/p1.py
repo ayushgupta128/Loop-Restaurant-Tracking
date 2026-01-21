@@ -1,203 +1,33 @@
-{
-  "id" : "p1",
-  "metainfo" : {
-    "label" : "p1",
-    "autoLayout" : false,
-    "version" : 1,
-    "configuration" : {
-      "schema" : {
-        "type" : "record",
-        "fields" : [ ]
-      }
-    },
-    "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false
-  },
-  "processes" : {
-    "people_0##FDaJ4XPl" : {
-      "id" : "people_0##FDaJ4XPl",
-      "component" : "OrchestrationSource",
-      "kind" : "DatabricksSource",
-      "metadata" : {
-        "label" : "people_0",
-        "x" : -700,
-        "y" : -420,
-        "phase" : 0
-      },
-      "properties" : {
-        "connector" : {
-          "kind" : "databricks",
-          "properties" : {
-            "provider" : "",
-            "clientId" : "",
-            "oAuthType" : "u2m",
-            "kgConfig" : {
-              "authProperties" : {
-                "authType" : "oauth",
-                "clientId" : "",
-                "oAuthAppRegistrationID" : "",
-                "oAuthType" : "u2m"
-              },
-              "kgSchedule" : { },
-              "useConnectorAuth" : true
-            },
-            "authType" : "pat",
-            "id" : "databricks_2",
-            "oAuthAppRegistrationID" : ""
-          },
-          "type" : "connector"
-        },
-        "format" : {
-          "kind" : "databricks",
-          "properties" : {
-            "schema" : {
-              "fields" : [ {
-                "name" : "name",
-                "dataType" : {
-                  "type" : "utf8"
-                }
-              }, {
-                "name" : "row_origin",
-                "dataType" : {
-                  "type" : "utf8"
-                }
-              } ],
-              "providerType" : "arrow"
-            }
+with DAG():
+    people_0 = SourceTask(
+        task_id = "people_0", 
+        component = "OrchestrationSource", 
+        kind = "DatabricksSource", 
+        connector = Connection(
+          kind = "databricks", 
+          provider = "", 
+          clientId = "", 
+          oAuthType = "u2m", 
+          kgConfig = {
+            "authProperties": {"authType" : "oauth", "clientId" : "", "oAuthAppRegistrationID" : "", "oAuthType" : "u2m"}, 
+            "kgSchedule": {}, 
+            "useConnectorAuth": True
+          }, 
+          authType = "pat", 
+          id = "databricks_2", 
+          oAuthAppRegistrationID = ""
+        ), 
+        format = DATABRICKSFormat(
+          schema = {
+            "fields": [{"name" : "name", "dataType" : {"type" : "utf8"}},                         {"name" : "row_origin", "dataType" : {"type" : "utf8"}}], 
+            "providerType": "arrow"
           }
-        },
-        "properties" : {
-          "tableFullName" : {
-            "database" : "ayush_demos",
-            "name" : "people",
-            "schema" : "demos"
-          }
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "KAWTwpc8",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "row_origin",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 0
-    },
-    "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO" : {
-      "id" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-      "component" : "Dataset",
-      "metadata" : {
-        "label" : "entity_name_origin",
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "klp",
-          "sourceType" : "Table",
-          "sourceName" : "ayush_demos_demos",
-          "alias" : ""
-        },
-        "writeOptions" : {
-          "writeMode" : "overwrite"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "row_origin",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "slug" : "in"
-        } ],
-        "outputs" : [ {
-          "id" : "V1BEHZWxWuLuBx1QGiRKl$$3wNfZScUJoGYSRwHIz-PD",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "row_origin",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "filter_name_ayus##WKPdNwLy" : {
-      "id" : "filter_name_ayus##WKPdNwLy",
-      "component" : "Filter",
-      "metadata" : {
-        "label" : "filter_name_ayush",
-        "phase" : 0
-      },
-      "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "expression" : "name = 'Ayush'"
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "bZpSLVHk",
-          "slug" : "entity_name_origin"
-        } ],
-        "outputs" : [ {
-          "id" : "EZynpdLw",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 2
-    }
-  },
-  "connections" : [ {
-    "id" : "ttehH1HY",
-    "source" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-    "sourcePort" : "SAaD1BOO",
-    "target" : "filter_name_ayus##WKPdNwLy",
-    "targetPort" : "bZpSLVHk"
-  }, {
-    "id" : "cHQMLhU7RVAbTbp",
-    "source" : "filter_name_ayus##WKPdNwLy",
-    "sourcePort" : "EZynpdLw",
-    "target" : "RMxtsTDCcWrGvNGFoa9_U$$bbfb6vU1r1Eo8h9tuXIpO",
-    "targetPort" : "lXKdQ15y785sCUIsEkM3v$$3R5DXu3VCgBBeGHpv1DKk"
-  } ],
-  "component" : "Pipeline"
-}
+        ), 
+        tableFullName = {"database" : "ayush_demos", "name" : "people", "schema" : "demos"}
+    )
+    entity_name_origin = Task(
+        task_id = "entity_name_origin", 
+        component = "Dataset", 
+        table = {"name" : "klp", "sourceType" : "Table", "sourceName" : "ayush_demos_demos", "alias" : ""}, 
+        writeOptions = {"writeMode" : "overwrite"}
+    )
