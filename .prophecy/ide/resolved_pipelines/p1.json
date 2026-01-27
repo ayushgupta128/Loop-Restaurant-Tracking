@@ -1,0 +1,126 @@
+{
+  "id" : "p1",
+  "metainfo" : {
+    "label" : "p1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV" : "models/p1/p1__Union_1.sql",
+      "6JqP2pun6-cQJjRy6oONh$$dCp9uS07oTJN1vlEAq_y_" : "models/p1/p1__Union_1.sql",
+      "Union_1_OCe-Ost906B7Ti8vXmTmm$$lL08xpgpV9do3TqBA7lJL" : "models/p1/p1__Union_1.sql",
+      "vfzl_7isAsZ10EgJEtoyu$$RK4emTs3ICRKw-UYQC7WB" : "models/p1/p1__Union_1.sql"
+    }
+  },
+  "processes" : {
+    "vfzl_7isAsZ10EgJEtoyu$$RK4emTs3ICRKw-UYQC7WB" : {
+      "id" : "vfzl_7isAsZ10EgJEtoyu$$RK4emTs3ICRKw-UYQC7WB",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "numeric_metrics",
+        "x" : -1340,
+        "y" : -820,
+        "phase" : 0,
+        "comment" : "Loads initial seed data into the pipeline, replacing any existing records.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "p1",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "LFc5v7Qfxq3zrtW1rBwJx$$0F5sCZgcXbxSxS_89NWPI",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "6JqP2pun6-cQJjRy6oONh$$dCp9uS07oTJN1vlEAq_y_" : {
+      "id" : "6JqP2pun6-cQJjRy6oONh$$dCp9uS07oTJN1vlEAq_y_",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "numeric_metrics_1",
+        "x" : -1260,
+        "y" : -600,
+        "phase" : 0,
+        "comment" : "Loads initial seed data into the pipeline, replacing any existing records.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "table" : {
+          "name" : "p1",
+          "sourceType" : "Seed"
+        },
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "SRAPhDPBglDFJWrI-MfQR$$hWhViFyXstF7XGM0E5fb_",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV" : {
+      "id" : "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "p1__Union_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "p1__Union_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Union_1_OCe-Ost906B7Ti8vXmTmm$$lL08xpgpV9do3TqBA7lJL", "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV", "6JqP2pun6-cQJjRy6oONh$$dCp9uS07oTJN1vlEAq_y_", "vfzl_7isAsZ10EgJEtoyu$$RK4emTs3ICRKw-UYQC7WB" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "p1__Union_1_in_0",
+          "slug" : "in_0"
+        }, {
+          "id" : "p1__Union_1_in_1",
+          "slug" : "in_1"
+        } ],
+        "outputs" : [ {
+          "id" : "p1__Union_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "Edq6175_3FZw67pCpTsZU",
+    "source" : "6JqP2pun6-cQJjRy6oONh$$dCp9uS07oTJN1vlEAq_y_",
+    "sourcePort" : "SRAPhDPBglDFJWrI-MfQR$$hWhViFyXstF7XGM0E5fb_",
+    "target" : "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV",
+    "targetPort" : "p1__Union_1_in_0"
+  }, {
+    "id" : "bOxRwwi_JU48OTmr5A5C5",
+    "source" : "vfzl_7isAsZ10EgJEtoyu$$RK4emTs3ICRKw-UYQC7WB",
+    "sourcePort" : "LFc5v7Qfxq3zrtW1rBwJx$$0F5sCZgcXbxSxS_89NWPI",
+    "target" : "_fnhEEyXJbWiqGsIPNBM7$$_SzvDKFMmBGtt_RkZqziV",
+    "targetPort" : "p1__Union_1_in_1"
+  } ],
+  "component" : "Pipeline"
+}

@@ -26,9 +26,142 @@ subgraphs: {}
 sqlModels: {}
 sqlSnapshots: {}
 sqlTests: {}
-sqlMacros: {}
-sqlSeeds: {}
-sqlSources: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
+    createdAt: '2026-01-19 08:07:11'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/p1:
+    name: p1
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: a
+        dataType:
+          type: Integer
+      - name: b
+        dataType:
+          type: Integer
+      - name: c
+        dataType:
+          type: Integer
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - seeds/p1.csv
+    createdAt: '2026-01-27 07:01:59'
+sqlSources:
+  .prophecy/metadata/sqlsources/ayush_demos_demos:
+    name: ayush_demos_demos
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2026-01-20 02:19:51'
+    tables:
+    - name: customer_eventhiugius_1
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: customer_name
+          dataType:
+            type: String
+        - name: address
+          dataType:
+            type: String
+        - name: status
+          dataType:
+            type: String
+        - name: effective_date
+          dataType:
+            type: Date
+        - name: end_date
+          dataType:
+            type: Date
+        - name: extra_col
+          dataType:
+            type: String
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-01-20 02:27:53'
+      tableType: table
+    - name: initial_table
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: customer_name
+          dataType:
+            type: String
+        - name: address
+          dataType:
+            type: String
+        - name: status
+          dataType:
+            type: String
+        - name: effective_date
+          dataType:
+            type: Date
+        - name: end_date
+          dataType:
+            type: Date
+        - name: extra_col
+          dataType:
+            type: String
+        - name: dbt_scd_id
+          dataType:
+            type: String
+        - name: dbt_valid_from
+          dataType:
+            type: String
+        - name: dbt_valid_to
+          dataType:
+            type: String
+        - name: dbt_updated_at
+          dataType:
+            type: Timestamp
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-01-20 02:22:26'
+      tableType: table
+    - name: customer
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: String
+        - name: event_type
+          dataType:
+            type: String
+        - name: event_time
+          dataType:
+            type: Timestamp
+        - name: country
+          dataType:
+            type: String
+        - name: city
+          dataType:
+            type: String
+      description: null
+      author: g.ayush@prophecy.io
+      createdAt: '2026-01-27 07:00:27'
+      tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
@@ -49,3 +182,16 @@ flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
 projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/p1:
+    name: p1
+    schema: null
+    description: null
+    author: g.ayush@prophecy.io
+    files:
+    - pipelines/p1.py
+    - .prophecy/ide/pipelines/p1.json
+    - models/p1/p1__Union_1.sql
+    - models/p1/schema.yml
+    createdAt: '2026-01-19 08:07:11'
+sqlBusinessApps: {}

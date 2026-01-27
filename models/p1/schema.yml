@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "p1__Union_1"
+  tags:
+  - "prophecy_temp"
