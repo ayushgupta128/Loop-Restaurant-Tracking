@@ -191,7 +191,7 @@ sqlOrchestratorPipelines:
     files:
     - pipelines/p1.py
     - .prophecy/ide/pipelines/p1.json
-    - models/p1/p1__Union_1.sql
     - models/p1/schema.yml
+    - models/p1/p1__limit_gem.sql
     createdAt: '2026-01-19 08:07:11'
 sqlBusinessApps: {}

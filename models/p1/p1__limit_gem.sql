@@ -34,8 +34,18 @@ Union_1 AS (
   
   FROM numeric_metrics_1 AS in1
 
+),
+
+limit_gem AS (
+
+  SELECT * 
+  
+  FROM Union_1
+  
+  LIMIT 1
+
 )
 
 SELECT *
 
-FROM Union_1
+FROM limit_gem
