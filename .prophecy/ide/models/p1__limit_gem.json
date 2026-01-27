@@ -23,8 +23,8 @@
       "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics_1",
-        "x" : -1260,
-        "y" : -600,
+        "x" : -1300,
+        "y" : -440,
         "phase" : 0
       },
       "properties" : {
