@@ -1,6 +1,6 @@
 ---
 version: 2
 models:
-- name: "p1__limit_gem"
+- name: "p1__join_on_a"
   tags:
   - "prophecy_temp"

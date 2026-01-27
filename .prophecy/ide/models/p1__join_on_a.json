@@ -1,31 +1,56 @@
 {
-  "id" : "p1",
+  "id" : "p1__join_on_a",
   "metainfo" : {
-    "label" : "p1",
-    "autoLayout" : false,
-    "version" : 1,
-    "configuration" : {
-      "schema" : {
-        "type" : "record",
-        "fields" : [ ]
+    "label" : "p1__join_on_a",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"ayush_demos\"",
+        "schema" : "\"demos\"",
+        "type" : "ModelConfig"
       }
     },
-    "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false,
-    "processesVsModelFiles" : {
-      "join_on_a_tLDDo1p7" : "models/p1/p1__join_on_a.sql",
-      "numeric_metrics_##zc2tJaQJ" : "models/p1/p1__join_on_a.sql",
-      "Union_1##N4uiaKgB" : "models/p1/p1__join_on_a.sql",
-      "numeric_metrics##B5THjwUb" : "models/p1/p1__join_on_a.sql",
-      "OuPsV_FLLluz1uYN8RMKs$$zQ-50629VRxF_1CYnJdPn" : "models/p1/p1__join_on_a.sql",
-      "join_on_a##fl4vi5y2" : "models/p1/p1__join_on_a.sql",
-      "limit_gem##heMuuRqd" : "models/p1/p1__join_on_a.sql"
-    }
+    "version" : 3
   },
   "processes" : {
+    "join_on_a_tLDDo1p7" : {
+      "id" : "join_on_a_tLDDo1p7",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "join_on_a"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM join_on_a\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
     "numeric_metrics_##zc2tJaQJ" : {
       "id" : "numeric_metrics_##zc2tJaQJ",
-      "component" : "Dataset",
+      "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics_1",
         "x" : -1300,
@@ -47,9 +72,9 @@
           "id" : "DQzutWBc",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 0
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     },
     "Union_1##N4uiaKgB" : {
       "id" : "Union_1##N4uiaKgB",
@@ -78,12 +103,13 @@
           "id" : "SJLNdXgr",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "numeric_metrics##B5THjwUb" : {
       "id" : "numeric_metrics##B5THjwUb",
-      "component" : "Dataset",
+      "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics",
         "x" : -1340,
@@ -105,13 +131,13 @@
           "id" : "g2jx0dTA",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 2
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     },
     "OuPsV_FLLluz1uYN8RMKs$$zQ-50629VRxF_1CYnJdPn" : {
       "id" : "OuPsV_FLLluz1uYN8RMKs$$zQ-50629VRxF_1CYnJdPn",
-      "component" : "Dataset",
+      "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics_1_1",
         "x" : -800,
@@ -133,7 +159,8 @@
           "id" : "jJoYXetI",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "join_on_a##fl4vi5y2" : {
@@ -200,7 +227,8 @@
           "id" : "tLDDo1p7",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "limit_gem##heMuuRqd" : {
@@ -226,28 +254,17 @@
           "id" : "pJowzooA",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
-    "id" : "V2JQ8jnx",
-    "source" : "numeric_metrics##B5THjwUb",
-    "sourcePort" : "g2jx0dTA",
-    "target" : "Union_1##N4uiaKgB",
-    "targetPort" : "qzH2ZP6z"
-  }, {
-    "id" : "iiM3QqgD",
-    "source" : "numeric_metrics_##zc2tJaQJ",
-    "sourcePort" : "DQzutWBc",
-    "target" : "Union_1##N4uiaKgB",
-    "targetPort" : "TnWsHZNq"
-  }, {
-    "id" : "hiVOOIWs",
-    "source" : "Union_1##N4uiaKgB",
-    "sourcePort" : "SJLNdXgr",
-    "target" : "limit_gem##heMuuRqd",
-    "targetPort" : "OzSD1Fyq"
+    "id" : "conn_join_on_a##fl4vi5y2_tLDDo1p7_join_on_a_tLDDo1p7",
+    "source" : "join_on_a##fl4vi5y2",
+    "sourcePort" : "tLDDo1p7",
+    "target" : "join_on_a_tLDDo1p7",
+    "targetPort" : "input_port_0"
   }, {
     "id" : "T13qFYGr",
     "source" : "limit_gem##heMuuRqd",
@@ -260,6 +277,24 @@
     "sourcePort" : "jJoYXetI",
     "target" : "join_on_a##fl4vi5y2",
     "targetPort" : "ybVlo6WC"
+  }, {
+    "id" : "hiVOOIWs",
+    "source" : "Union_1##N4uiaKgB",
+    "sourcePort" : "SJLNdXgr",
+    "target" : "limit_gem##heMuuRqd",
+    "targetPort" : "OzSD1Fyq"
+  }, {
+    "id" : "V2JQ8jnx",
+    "source" : "numeric_metrics##B5THjwUb",
+    "sourcePort" : "g2jx0dTA",
+    "target" : "Union_1##N4uiaKgB",
+    "targetPort" : "qzH2ZP6z"
+  }, {
+    "id" : "iiM3QqgD",
+    "source" : "numeric_metrics_##zc2tJaQJ",
+    "sourcePort" : "DQzutWBc",
+    "target" : "Union_1##N4uiaKgB",
+    "targetPort" : "TnWsHZNq"
   } ],
-  "component" : "Pipeline"
+  "component" : "Model"
 }
