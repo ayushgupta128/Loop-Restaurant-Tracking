@@ -1,29 +1,26 @@
 {
-  "id" : "p1",
+  "id" : "p1__limit_gem",
   "metainfo" : {
-    "label" : "p1",
-    "autoLayout" : false,
-    "version" : 1,
-    "configuration" : {
-      "schema" : {
-        "type" : "record",
-        "fields" : [ ]
+    "label" : "p1__limit_gem",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"ayush_demos\"",
+        "schema" : "\"demos\"",
+        "type" : "ModelConfig"
       }
     },
-    "isTranspiledPipeline" : false,
-    "publishDiagnosticMetrics" : false,
-    "processesVsModelFiles" : {
-      "numeric_metrics_##zc2tJaQJ" : "models/p1/p1__limit_gem.sql",
-      "numeric_metrics##B5THjwUb" : "models/p1/p1__limit_gem.sql",
-      "limit_gem_pJowzooA" : "models/p1/p1__limit_gem.sql",
-      "limit_gem##heMuuRqd" : "models/p1/p1__limit_gem.sql",
-      "2apQWByRC26F2wdPB2g6d$$21F3j3U7E_7XcJ4dUqLAD" : "models/p1/p1__limit_gem.sql"
-    }
+    "version" : 3
   },
   "processes" : {
     "numeric_metrics_##zc2tJaQJ" : {
       "id" : "numeric_metrics_##zc2tJaQJ",
-      "component" : "Dataset",
+      "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics_1",
         "x" : -1300,
@@ -45,13 +42,13 @@
           "id" : "DQzutWBc",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 0
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     },
     "numeric_metrics##B5THjwUb" : {
       "id" : "numeric_metrics##B5THjwUb",
-      "component" : "Dataset",
+      "component" : "Source",
       "metadata" : {
         "label" : "numeric_metrics",
         "x" : -1340,
@@ -73,35 +70,38 @@
           "id" : "g2jx0dTA",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
-      },
-      "index" : 2
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     },
-    "OuPsV_FLLluz1uYN8RMKs$$zQ-50629VRxF_1CYnJdPn" : {
-      "id" : "OuPsV_FLLluz1uYN8RMKs$$zQ-50629VRxF_1CYnJdPn",
-      "component" : "Dataset",
+    "limit_gem_pJowzooA" : {
+      "id" : "limit_gem_pJowzooA",
+      "component" : "TargetModel",
       "metadata" : {
-        "label" : "numeric_metrics_1_1",
-        "x" : -800,
-        "y" : -360,
-        "phase" : 0
+        "label" : "limit_gem"
       },
       "properties" : {
-        "table" : {
-          "name" : "p1",
-          "sourceType" : "Seed"
-        },
-        "writeOptions" : {
-          "writeMode" : "overwrite"
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM limit_gem\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
         }
       },
       "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "jJoYXetI",
-          "slug" : "out"
+        "inputs" : [ {
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
         } ],
-        "isCustomOutputSchema" : false
+        "outputs" : [ {
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "limit_gem##heMuuRqd" : {
@@ -127,7 +127,8 @@
           "id" : "pJowzooA",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     },
     "2apQWByRC26F2wdPB2g6d$$21F3j3U7E_7XcJ4dUqLAD" : {
@@ -157,11 +158,18 @@
           "id" : "ICXXKlPm-9LaPp8q-ZqXQ$$_9Yba_uGqBHujxuDf_9hq",
           "slug" : "out"
         } ],
-        "isCustomOutputSchema" : false
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
       }
     }
   },
   "connections" : [ {
+    "id" : "conn_limit_gem##heMuuRqd_pJowzooA_limit_gem_pJowzooA",
+    "source" : "limit_gem##heMuuRqd",
+    "sourcePort" : "pJowzooA",
+    "target" : "limit_gem_pJowzooA",
+    "targetPort" : "input_port_0"
+  }, {
     "id" : "ui6Ec6IRqLgw5CBFVdwgw$$YJ8MUgDuz5YDK0yWW_OSz",
     "source" : "2apQWByRC26F2wdPB2g6d$$21F3j3U7E_7XcJ4dUqLAD",
     "sourcePort" : "ICXXKlPm-9LaPp8q-ZqXQ$$_9Yba_uGqBHujxuDf_9hq",
@@ -180,5 +188,5 @@
     "target" : "2apQWByRC26F2wdPB2g6d$$21F3j3U7E_7XcJ4dUqLAD",
     "targetPort" : "qvmbNakG1NUDOjkngcXbi$$KP4jOpHVVKngZeqZ6UMth"
   } ],
-  "component" : "Pipeline"
+  "component" : "Model"
 }
