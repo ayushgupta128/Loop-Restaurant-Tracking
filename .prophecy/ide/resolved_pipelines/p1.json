@@ -114,7 +114,9 @@
         "label" : "numeric_metrics",
         "x" : -1340,
         "y" : -820,
-        "phase" : 0
+        "phase" : 0,
+        "comment" : "Loads initial seed data into the pipeline for further processing.",
+        "autoUpdateComment" : true
       },
       "properties" : {
         "table" : {
