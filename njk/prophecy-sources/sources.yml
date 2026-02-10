@@ -1,0 +1,13 @@
+---
+version: 2
+sources:
+- name: "ayush_demos_demos"
+  database: "ayush_demos"
+  schema: "demos"
+  tables:
+  - name: "ds1"
+    config:
+      tags:
+      - "pipeline:hk"
+    columns: []
+    type: "table"
