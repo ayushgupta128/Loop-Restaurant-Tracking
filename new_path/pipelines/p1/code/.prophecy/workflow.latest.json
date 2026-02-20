@@ -93,11 +93,11 @@
     "target" : "UEJPxI454a3gX4u-Qr9Sf$$kz-66exLlYH6nYj28ixgL",
     "targetPort" : "eDE2BCYmpQ1YN6jPhVAma$$9pvtlA4WpiMG-encELW-J"
   }, {
-    "id" : "Uy_UD7EuFz37kJ4TrpGcE$$8CJxmRTBaYlodfDjreR0v",
+    "id" : "X42hz1gZRDnHCtTT2IDGJ$$xkLIT9wkNCrgXon_Np8M5",
     "source" : "UEJPxI454a3gX4u-Qr9Sf$$kz-66exLlYH6nYj28ixgL",
     "sourcePort" : "x_cJDpnXPtUNSQYXxwID3$$89YH-G8wZia5M5r22rZ80",
-    "target" : "GSKF-uApIbKDuAmPX5uL5$$kYj9KazUTfxTXkmjzh7ez",
-    "targetPort" : "xmsQheAC9lWcp3_c-ZWb2$$Ul6sXuOjzW7wwl0KGUjty"
+    "target" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
+    "targetPort" : "nqOj9E6yxaIsCPXK0LkhC$$Gq1omIhEByjaYws0KWC9P"
   } ],
   "processes" : {
     "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT" : {
@@ -190,24 +190,26 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "GSKF-uApIbKDuAmPX5uL5$$kYj9KazUTfxTXkmjzh7ez" : {
-      "id" : "GSKF-uApIbKDuAmPX5uL5$$kYj9KazUTfxTXkmjzh7ez",
-      "component" : "Filter",
+    "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT" : {
+      "id" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
+      "component" : "Limit",
       "metadata" : {
-        "label" : "Filter_2",
-        "slug" : "Filter_2",
-        "x" : -840,
-        "y" : -540,
+        "label" : "limit_100_rows",
+        "slug" : "limit_100_rows",
+        "x" : -880,
+        "y" : -520,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
+        "comment" : "Selects the first 100 records for quick review or sampling.",
+        "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "xmsQheAC9lWcp3_c-ZWb2$$Ul6sXuOjzW7wwl0KGUjty",
+          "id" : "nqOj9E6yxaIsCPXK0LkhC$$Gq1omIhEByjaYws0KWC9P",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
@@ -234,7 +236,7 @@
           "isStreaming" : false
         } ],
         "outputs" : [ {
-          "id" : "8szwbBKx2ARgBta-BXRqK$$Q5EaXKdz5z-CKgmeFLwIw",
+          "id" : "EkulLMeiHZ-2IVngAxgg_$$UaVSiOvIFK-IkIvrFjQyI",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -242,14 +244,10 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "columnsSelector" : [ ],
-        "condition" : {
-          "format" : "sql",
-          "expression" : "true"
-        }
+        "limit" : "100"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Limit",
         "projectName" : "ProphecySparkBasicsPython"
       }
     }
