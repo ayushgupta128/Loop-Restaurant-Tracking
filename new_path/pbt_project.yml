@@ -22,7 +22,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/s1
-      outputs: []
+      outputs:
+      - datasets/tgt
     subgraphs: []
     dependencies: {}
 datasets:
@@ -39,6 +40,19 @@ datasets:
         description: ''
         author: g.ayush@prophecy.io
         createdAt: '2026-02-20 11:34:33'
+  datasets/tgt:
+    name: tgt
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-02-20 12:03:08'
+    mode: batch
+    physicalDatasets:
+      guides-prod-fabric:
+        fabricId: 30674
+        datasetType: Database
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-02-20 12:03:08'
 templates: {}
 jobs: {}
 gemContainer:

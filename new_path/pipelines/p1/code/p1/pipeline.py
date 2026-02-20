@@ -10,6 +10,7 @@ def pipeline(spark: SparkSession) -> None:
     df_seed1_1 = seed1_1(spark)
     df_Filter_1 = Filter_1(spark, df_seed1_1)
     df_limit_100_rows = limit_100_rows(spark, df_Filter_1)
+    tgt(spark, df_limit_100_rows)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("p1").getOrCreate()

@@ -98,6 +98,12 @@
     "sourcePort" : "x_cJDpnXPtUNSQYXxwID3$$89YH-G8wZia5M5r22rZ80",
     "target" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
     "targetPort" : "nqOj9E6yxaIsCPXK0LkhC$$Gq1omIhEByjaYws0KWC9P"
+  }, {
+    "id" : "VS-d5Z_vkgUJL9oQNatzW$$VRGpuGNsVGu3jjSx4IJN5",
+    "source" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
+    "sourcePort" : "EkulLMeiHZ-2IVngAxgg_$$UaVSiOvIFK-IkIvrFjQyI",
+    "target" : "Amgz9NhEKlnWwr2Oi0FXE$$3MnSBq2yYAsXtMhCXyz7F",
+    "targetPort" : "bFcpFpGEGjvX-Bgha-Y2m$$wgT-eQojLeGTwF1G5T4uJ"
   } ],
   "processes" : {
     "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT" : {
@@ -249,6 +255,56 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Limit",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Amgz9NhEKlnWwr2Oi0FXE$$3MnSBq2yYAsXtMhCXyz7F" : {
+      "id" : "Amgz9NhEKlnWwr2Oi0FXE$$3MnSBq2yYAsXtMhCXyz7F",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "tgt",
+        "slug" : "tgt",
+        "x" : -720,
+        "y" : -540,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bFcpFpGEGjvX-Bgha-Y2m$$wgT-eQojLeGTwF1G5T4uJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/tgt"
       }
     }
   },
