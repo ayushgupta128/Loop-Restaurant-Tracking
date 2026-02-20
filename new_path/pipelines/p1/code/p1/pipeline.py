@@ -7,6 +7,7 @@ from prophecy.utils import *
 from p1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
+    print_test_message(spark)
     df_seed1_1 = seed1_1(spark)
     df_Filter_1 = Filter_1(spark, df_seed1_1)
     df_limit_100_rows = limit_100_rows(spark, df_Filter_1)

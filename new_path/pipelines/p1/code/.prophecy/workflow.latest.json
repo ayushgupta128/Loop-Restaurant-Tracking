@@ -106,23 +106,81 @@
     "targetPort" : "bFcpFpGEGjvX-Bgha-Y2m$$wgT-eQojLeGTwF1G5T4uJ"
   } ],
   "processes" : {
-    "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT" : {
-      "id" : "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT",
-      "component" : "Source",
+    "2O4xJbcD5AtQlE8FFHH2O$$EHclTeJ1uACfDe-OJNxUh" : {
+      "id" : "2O4xJbcD5AtQlE8FFHH2O$$EHclTeJ1uACfDe-OJNxUh",
+      "component" : "Script",
       "metadata" : {
-        "label" : "seed1_1",
-        "slug" : "seed1_1",
-        "x" : -1220,
-        "y" : -460,
+        "label" : "print_test_message",
+        "slug" : "print_test_message",
+        "x" : -960,
+        "y" : -320,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Outputs a test message to confirm system functionality.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      },
+      "properties" : {
+        "script" : "print(\"test job databricks\")",
+        "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
+        "scriptMethodFooter" : "    return "
+      }
+    },
+    "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT" : {
+      "id" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "limit_100_rows",
+        "slug" : "limit_100_rows",
+        "x" : -880,
+        "y" : -520,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Selects the first 100 records for quick review or sampling.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "nqOj9E6yxaIsCPXK0LkhC$$Gq1omIhEByjaYws0KWC9P",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
         "outputs" : [ {
-          "id" : "pjykKui8LmbJWomcw7oL3$$SJW2hdR1t7iAWXGFCHHsS",
+          "id" : "EkulLMeiHZ-2IVngAxgg_$$UaVSiOvIFK-IkIvrFjQyI",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -130,7 +188,11 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/s1"
+        "limit" : "100"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
       }
     },
     "UEJPxI454a3gX4u-Qr9Sf$$kz-66exLlYH6nYj28ixgL" : {
@@ -196,53 +258,23 @@
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT" : {
-      "id" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
-      "component" : "Limit",
+    "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT" : {
+      "id" : "zFjPka7Dg_aNfOIgIB4g2$$LvrUpIInOcJmud4UzeypT",
+      "component" : "Source",
       "metadata" : {
-        "label" : "limit_100_rows",
-        "slug" : "limit_100_rows",
-        "x" : -880,
-        "y" : -520,
+        "label" : "seed1_1",
+        "slug" : "seed1_1",
+        "x" : -1220,
+        "y" : -460,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Selects the first 100 records for quick review or sampling.",
-        "autoUpdateComment" : true,
-        "dataPreview" : false,
-        "showRecordsCount" : false
+        "isImported" : false
       },
       "ports" : {
-        "inputs" : [ {
-          "id" : "nqOj9E6yxaIsCPXK0LkhC$$Gq1omIhEByjaYws0KWC9P",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "col1",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "col2",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
-        } ],
+        "inputs" : [ ],
         "outputs" : [ {
-          "id" : "EkulLMeiHZ-2IVngAxgg_$$UaVSiOvIFK-IkIvrFjQyI",
+          "id" : "pjykKui8LmbJWomcw7oL3$$SJW2hdR1t7iAWXGFCHHsS",
           "slug" : "out"
         } ],
         "selectedInputFields" : [ ],
@@ -250,11 +282,7 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "limit" : "100"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Limit",
-        "projectName" : "ProphecySparkBasicsPython"
+        "datasetId" : "datasets/s1"
       }
     },
     "Amgz9NhEKlnWwr2Oi0FXE$$3MnSBq2yYAsXtMhCXyz7F" : {
