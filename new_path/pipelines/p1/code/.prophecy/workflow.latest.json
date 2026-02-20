@@ -268,7 +268,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Saves the processed data into a central business table for reporting and analysis.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
