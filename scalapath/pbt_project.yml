@@ -1,6 +1,6 @@
 name: scalanewdeploy
 description: ''
-version: 1.0.0
+version: 2.0.0
 author: g.ayush@prophecy.io
 language: scala
 buildSystem: ''
