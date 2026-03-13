@@ -80,14 +80,14 @@ sqlPipeline: null
 dependencies:
 - modifiedAt: '2026-02-20T11:30:33.923166Z'
   name: plibMaven
-  version: 8.16.3
+  version: 9.0.4
   createdAt: '2026-02-20T11:30:33.923166Z'
   type: plibMaven
   enabled: true
   entity: Project
 - modifiedAt: '2026-03-13T09:41:29.994Z'
   name: ProphecyLibsPython
-  version: 2.1.9
+  version: 2.1.10
   createdAt: '2026-02-20T11:30:33.923166Z'
   type: plibPypi
   enabled: true
