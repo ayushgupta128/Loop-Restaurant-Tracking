@@ -80,16 +80,21 @@ sqlPipeline: null
 dependencies:
 - modifiedAt: '2026-02-20T11:30:33.923166Z'
   name: plibMaven
-  version: 9.0.1
-  id: '490274477'
+  version: 8.16.3
   createdAt: '2026-02-20T11:30:33.923166Z'
   type: plibMaven
-- modifiedAt: '2026-02-20T11:30:33.923166Z'
-  name: plibPypi
-  version: 2.1.10
-  id: '1218361463'
+  enabled: true
+  entity: Project
+- modifiedAt: '2026-03-13T09:41:29.994Z'
+  name: ProphecyLibsPython
+  version: 2.1.9
   createdAt: '2026-02-20T11:30:33.923166Z'
   type: plibPypi
+  enabled: true
+  entity: Project
+  description: Default dependency for Prophecy Libs
+  scope: Project
+  editable: true
 projectDependencies:
   '12654':
     projectUID: 12654
@@ -107,7 +112,28 @@ projectDependencies:
     isDefault: true
     author: null
     createdAt: '2026-02-20 11:30:06'
+  '166567':
+    projectUID: 166567
+    projectName: pythontest
+    repositoryPath: gitUri=http://gitserver:3000/5mSYqHIH_team_13770/EOi66H2T_project_166567.git&subPath=
+    version: pythontest/1.0.0
+    isDefault: false
+    author: null
+    createdAt: '2026-03-11 13:19:17'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
-pipelineConfigurations: {}
+pipelineConfigurations:
+  pipelineConfigurations/pythontest/bnikb:
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-11 13:11:29'
+    configurations:
+      pipelineConfigurations/pythontest/bnikb/default:
+        name: default
+        author: null
+        createdAt: '2026-03-11 13:11:29'
+      pipelineConfigurations/pythontest/bnikb/vgtu:
+        name: vgtu
+        author: null
+        createdAt: '2026-03-11 13:11:29'
+    basePipeline: 166567/pipelines/bnikb
 projectConfigurations: {}
