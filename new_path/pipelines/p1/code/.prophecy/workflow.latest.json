@@ -12,6 +12,7 @@
         "pyPiVersion" : "2.1.10"
       },
       "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
       "workflowMode" : "batch"
     },
     "id" : "1",
@@ -43,6 +44,16 @@
       "common" : {
         "type" : "record",
         "fields" : [ {
+          "name" : "vjvik",
+          "kind" : {
+            "type" : "string",
+            "value" : "bikvik"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
           "name" : "vrfe",
           "kind" : {
             "type" : "string",
@@ -61,7 +72,25 @@
       "instances" : { },
       "selected" : "vrefq",
       "nonEditable" : [ ],
-      "isSubscribedPipelineWithPipelineConfigs" : false
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "vjvik",
+            "kind" : {
+              "type" : "string",
+              "value" : "bikvik"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : { }
+        }
+      }
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",

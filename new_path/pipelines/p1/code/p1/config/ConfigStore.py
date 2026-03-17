@@ -10,4 +10,5 @@ class Utils:
         global Config
         Config.updateSpark(spark)
         conf = parse_config(args, config_package = "prophecy_config_instances.p1")
-        Config.update(**conf)
+        prophecy_project_config = parse_project_config(args)
+        Config.update(**{**{"prophecy_project_config" : prophecy_project_config}, **conf})

@@ -1,0 +1,18 @@
+{
+  "common" : {
+    "type" : "record",
+    "fields" : [ {
+      "name" : "vjvik",
+      "kind" : {
+        "type" : "string",
+        "value" : "bikvik"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    } ]
+  },
+  "instances" : {
+    "default" : { }
+  }
+}

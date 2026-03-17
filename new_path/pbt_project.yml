@@ -148,4 +148,9 @@ pipelineConfigurations:
         author: null
         createdAt: '2026-03-11 13:11:29'
     basePipeline: 166567/pipelines/bnikb
-projectConfigurations: {}
+projectConfigurations:
+  projectConfigurations/config:
+    name: config
+    description: null
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-17 11:23:50'

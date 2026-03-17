@@ -1,0 +1,11 @@
+{
+  "type" : "record",
+  "fields" : [ {
+    "name" : "vjvik",
+    "kind" : {
+      "type" : "string",
+      "value" : "bikvik"
+    },
+    "optional" : false
+  } ]
+}
