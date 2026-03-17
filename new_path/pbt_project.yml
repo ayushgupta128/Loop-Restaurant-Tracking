@@ -105,6 +105,16 @@ dependencies:
   entity: Project
   modifiedAt: '2026-03-17T07:08:02.749Z'
   createdAt: '2026-03-17T07:08:02.749Z'
+- description: ''
+  editable: true
+  enabled: true
+  type: pypi
+  name: cer3wq
+  scope: Project
+  package: asana==5.1.0
+  entity: Project
+  modifiedAt: '2026-03-17T07:29:16.332Z'
+  createdAt: '2026-03-17T07:29:16.332Z'
 projectDependencies:
   '12654':
     projectUID: 12654
