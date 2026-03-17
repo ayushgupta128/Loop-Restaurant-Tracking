@@ -22,7 +22,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/bbh
-      outputs: []
+      outputs:
+      - datasets/fytfiu
     subgraphs: []
     dependencies: {}
 datasets:
@@ -39,6 +40,19 @@ datasets:
         description: ''
         author: g.ayush@prophecy.io
         createdAt: '2026-03-17 12:59:30'
+  datasets/fytfiu:
+    name: fytfiu
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-17 13:15:41'
+    mode: batch
+    physicalDatasets:
+      guides-prod-fabric:
+        fabricId: 30674
+        datasetType: Database
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-03-17 13:15:41'
 templates: {}
 jobs: {}
 gemContainer:

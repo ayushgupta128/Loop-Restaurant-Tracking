@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from p1.config.ConfigStore import *
 from p1.functions import *
 
-def bbh(spark: SparkSession) -> DataFrame:
-    return spark.read.table("`ayush_demos`.`demos`.`customer`")
+def fytfiu(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable("`ayush_demos`.`demos`.`new_test`")

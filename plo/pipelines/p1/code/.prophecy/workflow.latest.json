@@ -27,7 +27,7 @@
       }
     },
     "language" : "python",
-    "fabricId" : "21998",
+    "fabricId" : "30674",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -159,7 +159,19 @@
     "configTopLevelPackage" : "p1",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
+  "connections" : [ {
+    "id" : "MvWYokSmzg0ZTAcjDuD_U$$9cl8o2uvYhQ_WM95_DH2m",
+    "source" : "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB",
+    "sourcePort" : "80GjmqLk5AL6dikatVvsR$$mTLuT0OSE1asyyfjb4Ch5",
+    "target" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+    "targetPort" : "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ"
+  }, {
+    "id" : "T7X0s5Uloh3DuT7KPO12s$$AxEH7bO7aUvqB1M1hOkO6",
+    "source" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+    "sourcePort" : "YZFbkKcvCgmc58qg-hDlF$$IMeoZtKldPgBmqdxtKZzt",
+    "target" : "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7",
+    "targetPort" : "arhrXvXpWmPuA-NjSKuBh$$Y4BySbA_9iBFnimAiUfwx"
+  } ],
   "processes" : {
     "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB" : {
       "id" : "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB",
@@ -167,12 +179,14 @@
       "metadata" : {
         "label" : "bbh",
         "slug" : "bbh",
-        "x" : -700,
-        "y" : -280,
+        "x" : -520,
+        "y" : -180,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Imports customer profile data to support customer-centric insights and decisions.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -186,6 +200,274 @@
       },
       "properties" : {
         "datasetId" : "datasets/bbh"
+      }
+    },
+    "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz" : {
+      "id" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_rows_with_config_literals",
+        "slug" : "reformatted_rows_with_config_literals",
+        "x" : -360,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Formats customer events with embedded configuration values to influence downstream processing.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "YZFbkKcvCgmc58qg-hDlF$$IMeoZtKldPgBmqdxtKZzt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "customer_id",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "customer_id"
+          },
+          "description" : ""
+        }, {
+          "target" : "event_type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "event_type"
+          },
+          "description" : ""
+        }, {
+          "target" : "event_time",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "event_time"
+          },
+          "description" : ""
+        }, {
+          "target" : "country",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "country"
+          },
+          "description" : ""
+        }, {
+          "target" : "city",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "city"
+          },
+          "description" : ""
+        }, {
+          "target" : "sup1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$super1'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sup2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$super2'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sub1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$sub1'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sub2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$sub2'"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##event_time", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##country", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##event_type", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##customer_id", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##city" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7" : {
+      "id" : "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "fytfiu",
+        "slug" : "fytfiu",
+        "x" : -200,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "arhrXvXpWmPuA-NjSKuBh$$Y4BySbA_9iBFnimAiUfwx",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_type",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "event_time",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "city",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sup1",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sup2",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sub1",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sub2",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/fytfiu"
       }
     }
   },
