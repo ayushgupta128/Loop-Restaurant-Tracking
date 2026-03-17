@@ -13,6 +13,8 @@
     } ]
   },
   "instances" : {
-    "default" : { }
+    "default" : {
+      "vjvik" : "bikvik"
+    }
   }
 }
