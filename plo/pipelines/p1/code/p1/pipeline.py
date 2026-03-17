@@ -7,9 +7,9 @@ from prophecy.utils import *
 from p1.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_bbh = bbh(spark)
-    df_reformatted_rows_with_config_literals = reformatted_rows_with_config_literals(spark, df_bbh)
-    fytfiu(spark, df_reformatted_rows_with_config_literals)
+    df_vfv = vfv(spark)
+    df_reformatted_rows_with_config_literals = reformatted_rows_with_config_literals(spark, df_vfv)
+    rwg(spark, df_reformatted_rows_with_config_literals)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("p1").getOrCreate()

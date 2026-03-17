@@ -21,9 +21,9 @@ pipelines:
     createdAt: '2026-03-17 12:53:06'
     datasets:
       inputs:
-      - datasets/bbh
+      - datasets/vfv
       outputs:
-      - datasets/fytfiu
+      - datasets/rwg
     subgraphs: []
     dependencies: {}
 datasets:
@@ -53,6 +53,32 @@ datasets:
         description: ''
         author: g.ayush@prophecy.io
         createdAt: '2026-03-17 13:15:41'
+  datasets/vfv:
+    name: vfv
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-17 13:22:19'
+    mode: batch
+    physicalDatasets:
+      guides-prod-fabric:
+        fabricId: 30674
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-03-17 13:22:19'
+  datasets/rwg:
+    name: rwg
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-17 13:23:18'
+    mode: batch
+    physicalDatasets:
+      guides-prod-fabric:
+        fabricId: 30674
+        datasetType: File
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-03-17 13:23:18'
 templates: {}
 jobs: {}
 gemContainer:

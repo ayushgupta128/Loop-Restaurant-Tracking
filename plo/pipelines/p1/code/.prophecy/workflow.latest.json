@@ -17,6 +17,7 @@
     },
     "id" : "1",
     "uri" : "pipelines/p1",
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "p1",
       "hasApplication" : true,
@@ -160,48 +161,19 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "MvWYokSmzg0ZTAcjDuD_U$$9cl8o2uvYhQ_WM95_DH2m",
-    "source" : "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB",
-    "sourcePort" : "80GjmqLk5AL6dikatVvsR$$mTLuT0OSE1asyyfjb4Ch5",
+    "id" : "i9MSS6sI3WdiGjW7Ijwxm$$6JXcV_LFr14o5q57DpfwR",
+    "source" : "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U",
+    "sourcePort" : "OyUWHEOpLNE9wdIpADCxp$$mOE02LsnWOa3sWaE3Yy3A",
     "target" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
     "targetPort" : "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ"
   }, {
-    "id" : "T7X0s5Uloh3DuT7KPO12s$$AxEH7bO7aUvqB1M1hOkO6",
+    "id" : "vtGhXDXr0YA5UrNqw3-HP$$WtYpUmCmN6YCLxNxZUveQ",
     "source" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
     "sourcePort" : "YZFbkKcvCgmc58qg-hDlF$$IMeoZtKldPgBmqdxtKZzt",
-    "target" : "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7",
-    "targetPort" : "arhrXvXpWmPuA-NjSKuBh$$Y4BySbA_9iBFnimAiUfwx"
+    "target" : "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY",
+    "targetPort" : "AXLJ01bZjCdo8LJ0PynyQ$$vcSLVMyoKKFPBrxfa3kwS"
   } ],
   "processes" : {
-    "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB" : {
-      "id" : "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "bbh",
-        "slug" : "bbh",
-        "x" : -520,
-        "y" : -180,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Imports customer profile data to support customer-centric insights and decisions.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "80GjmqLk5AL6dikatVvsR$$mTLuT0OSE1asyyfjb4Ch5",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/bbh"
-      }
-    },
     "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz" : {
       "id" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
       "component" : "Reformat",
@@ -214,7 +186,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Formats customer events with embedded configuration values to influence downstream processing.",
+        "comment" : "Adds configuration literals to each row alongside existing columns for enhanced executability or auditing.",
         "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
@@ -226,47 +198,20 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "customer_id",
+              "name" : "col1",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "First string value; represents the primary identifier or category in this dataset.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "event_type",
+              "name" : "col2",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "event_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "city",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
+                "description" : "Second string value; provides an accompanying label or descriptor.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -285,41 +230,6 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
-          "target" : "customer_id",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "customer_id"
-          },
-          "description" : ""
-        }, {
-          "target" : "event_type",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "event_type"
-          },
-          "description" : ""
-        }, {
-          "target" : "event_time",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "event_time"
-          },
-          "description" : ""
-        }, {
-          "target" : "country",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "country"
-          },
-          "description" : ""
-        }, {
-          "target" : "city",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "city"
-          },
-          "description" : ""
-        }, {
           "target" : "sup1",
           "expression" : {
             "format" : "sql",
@@ -347,23 +257,37 @@
             "expression" : "'$sub2'"
           },
           "description" : ""
+        }, {
+          "target" : "col1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col1"
+          },
+          "description" : ""
+        }, {
+          "target" : "col2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col2"
+          },
+          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##event_time", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##country", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##event_type", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##customer_id", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##city" ]
+        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col1", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col2" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
         "projectName" : "ProphecySparkBasicsPython"
       }
     },
-    "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7" : {
-      "id" : "g_uX64R6R-KXwvz3VnMh1$$FPs4CPoyGnwfw08zbtwE7",
-      "component" : "Target",
+    "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U" : {
+      "id" : "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U",
+      "component" : "Source",
       "metadata" : {
-        "label" : "fytfiu",
-        "slug" : "fytfiu",
-        "x" : -200,
+        "label" : "vfv",
+        "slug" : "vfv",
+        "x" : -540,
         "y" : -220,
         "phase" : 0,
         "cache" : false,
@@ -371,57 +295,39 @@
         "isImported" : false
       },
       "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OyUWHEOpLNE9wdIpADCxp$$mOE02LsnWOa3sWaE3Yy3A",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/vfv"
+      }
+    },
+    "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY" : {
+      "id" : "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "rwg",
+        "slug" : "rwg",
+        "x" : -200,
+        "y" : -260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
         "inputs" : [ {
-          "id" : "arhrXvXpWmPuA-NjSKuBh$$Y4BySbA_9iBFnimAiUfwx",
+          "id" : "AXLJ01bZjCdo8LJ0PynyQ$$vcSLVMyoKKFPBrxfa3kwS",
           "slug" : "in0",
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "customer_id",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "event_type",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "event_time",
-              "type" : "timestamp",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "country",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "city",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
               "name" : "sup1",
               "type" : "string",
               "nullable" : false,
@@ -457,6 +363,24 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First string value; represents the primary identifier or category in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second string value; provides an accompanying label or descriptor.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -467,7 +391,7 @@
         "autoUpdateOnRun" : false
       },
       "properties" : {
-        "datasetId" : "datasets/fytfiu"
+        "datasetId" : "datasets/rwg"
       }
     }
   },

@@ -8,13 +8,10 @@ from p1.functions import *
 
 def reformatted_rows_with_config_literals(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
-        col("customer_id"), 
-        col("event_type"), 
-        col("event_time"), 
-        col("country"), 
-        col("city"), 
         lit(Config.super1).alias("sup1"), 
         lit(Config.super2).alias("sup2"), 
         lit(Config.sub1).alias("sub1"), 
-        lit(Config.sub2).alias("sub2")
+        lit(Config.sub2).alias("sub2"), 
+        col("col1"), 
+        col("col2")
     )
