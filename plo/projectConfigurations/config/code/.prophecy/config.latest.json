@@ -1,0 +1,27 @@
+{
+  "common" : {
+    "type" : "record",
+    "fields" : [ {
+      "name" : "super1",
+      "kind" : {
+        "type" : "string",
+        "value" : "super1"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    }, {
+      "name" : "super2",
+      "kind" : {
+        "type" : "string",
+        "value" : "super2"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    } ]
+  },
+  "instances" : {
+    "default" : { }
+  }
+}
