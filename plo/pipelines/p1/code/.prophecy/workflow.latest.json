@@ -116,9 +116,16 @@
           } ]
         },
         "instances" : {
-          "default" : { }
+          "default" : {
+            "super1" : "super1",
+            "super2" : "super2"
+          },
+          "prod" : {
+            "super1" : "super12"
+          }
         }
-      }
+      },
+      "selectedProjectConfig" : "prod"
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",
@@ -153,7 +160,35 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ ],
-  "processes" : { },
+  "processes" : {
+    "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB" : {
+      "id" : "qXDBruNh9vr8qKWJLSyyx$$jXHqxMTiebqOfOfWQqWAB",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "bbh",
+        "slug" : "bbh",
+        "x" : -700,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "80GjmqLk5AL6dikatVvsR$$mTLuT0OSE1asyyfjb4Ch5",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/bbh"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

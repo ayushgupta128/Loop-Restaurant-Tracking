@@ -20,11 +20,25 @@ pipelines:
     language: python
     createdAt: '2026-03-17 12:53:06'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/bbh
       outputs: []
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/bbh:
+    name: bbh
+    description: ''
+    author: g.ayush@prophecy.io
+    createdAt: '2026-03-17 12:59:30'
+    mode: batch
+    physicalDatasets:
+      EMR_Fabric:
+        fabricId: 21998
+        datasetType: Warehouse
+        description: ''
+        author: g.ayush@prophecy.io
+        createdAt: '2026-03-17 12:59:30'
 templates: {}
 jobs: {}
 gemContainer:
