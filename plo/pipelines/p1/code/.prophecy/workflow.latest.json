@@ -186,7 +186,7 @@
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Adds configuration literals to each row alongside existing columns for enhanced executability or auditing.",
+        "comment" : "Selects a single field from the dataset for further configuration-based processing.",
         "autoUpdateComment" : true,
         "dataPreview" : false,
         "showRecordsCount" : false
@@ -198,20 +198,11 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "col1",
+              "name" : "nib",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "First string value; represents the primary identifier or category in this dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "col2",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Second string value; provides an accompanying label or descriptor.",
+                "description" : "A code or identifier representing a specific dataset within the vfv collection.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -230,51 +221,16 @@
       "properties" : {
         "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
         "expressions" : [ {
-          "target" : "sup1",
+          "target" : "nib",
           "expression" : {
             "format" : "sql",
-            "expression" : "'$super1'"
-          },
-          "description" : ""
-        }, {
-          "target" : "sup2",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "'$super2'"
-          },
-          "description" : ""
-        }, {
-          "target" : "sub1",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "'$sub1'"
-          },
-          "description" : ""
-        }, {
-          "target" : "sub2",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "'$sub2'"
-          },
-          "description" : ""
-        }, {
-          "target" : "col1",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "col1"
-          },
-          "description" : ""
-        }, {
-          "target" : "col2",
-          "expression" : {
-            "format" : "sql",
-            "expression" : "col2"
+            "expression" : "nib"
           },
           "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col1", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col2" ]
+        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##nib" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
@@ -292,7 +248,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Creates a simple dataframe with a single text field, used for demonstration or testing data inputs.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -328,56 +286,11 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "sup1",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "sup2",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "sub1",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "sub2",
-              "type" : "string",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "col1",
+              "name" : "nib",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "First string value; represents the primary identifier or category in this dataset.",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "col2",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "Second string value; provides an accompanying label or descriptor.",
+                "description" : "A code or identifier representing a specific dataset within the vfv collection.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
