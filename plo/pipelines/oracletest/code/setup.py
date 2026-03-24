@@ -7,7 +7,7 @@ setup(
     package_data = {'prophecy_config_instances.oracletest' : ['*.json', '*.py', '*.conf']},
     description = 'workflow',
     install_requires = [
-'prophecy-libs==2.1.10'],
+'prophecy-libs==1.9.24'],
     entry_points = {
 'console_scripts' : [
 'main = oracletest.pipeline:main'], },

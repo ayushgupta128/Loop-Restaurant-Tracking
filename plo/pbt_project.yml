@@ -119,16 +119,21 @@ sqlPipeline: null
 dependencies:
 - modifiedAt: '2026-03-17T12:53:06.914324Z'
   name: plibMaven
-  version: 9.1.0
-  id: '1225614861'
+  version: 8.5.0
   createdAt: '2026-03-17T12:53:06.914324Z'
   type: plibMaven
-- modifiedAt: '2026-03-17T12:53:06.914324Z'
-  name: plibPypi
-  version: 2.1.10
-  id: '1252456445'
+  enabled: true
+  entity: Project
+- modifiedAt: '2026-03-24T11:20:08.529Z'
+  name: ProphecyLibsPython
+  version: 1.9.24
   createdAt: '2026-03-17T12:53:06.914324Z'
   type: plibPypi
+  enabled: true
+  entity: Project
+  description: Default dependency for Prophecy Libs
+  scope: Project
+  editable: true
 projectDependencies:
   '12654':
     projectUID: 12654
