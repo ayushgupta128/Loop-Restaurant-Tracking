@@ -8,7 +8,7 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "9.0.1",
+        "mavenVersion" : "9.0.4",
         "pyPiVersion" : "2.1.10"
       },
       "sparkConfigJinjaEnabled" : true,
@@ -33,7 +33,7 @@
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "gayushprophecyioteam.python.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions", "newteam1.pythontest.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -42,7 +42,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "vrfe",
+          "kind" : {
+            "type" : "string",
+            "value" : "vera"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -50,7 +59,7 @@
       },
       "fabrics" : { },
       "instances" : { },
-      "selected" : "default",
+      "selected" : "vrefq",
       "nonEditable" : [ ],
       "isSubscribedPipelineWithPipelineConfigs" : false
     },
@@ -73,6 +82,24 @@
       "projectUID" : "12655",
       "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "166567",
+      "projectName" : "pythontest",
+      "externalDependencies" : [ {
+        "type" : "plibMaven",
+        "modifiedAt" : "2026-03-11T06:15:25.636823Z",
+        "name" : "plibMaven",
+        "version" : "9.0.4",
+        "id" : "311819612",
+        "createdAt" : "2026-03-11T06:15:25.636823Z"
+      }, {
+        "type" : "plibPypi",
+        "modifiedAt" : "2026-03-11T06:15:25.636823Z",
+        "name" : "plibPypi",
+        "version" : "2.1.10",
+        "id" : "140454935",
+        "createdAt" : "2026-03-11T06:15:25.636823Z"
+      } ]
     } ],
     "isImported" : false,
     "interimMode" : "Full",
@@ -106,42 +133,14 @@
     "targetPort" : "bFcpFpGEGjvX-Bgha-Y2m$$wgT-eQojLeGTwF1G5T4uJ"
   } ],
   "processes" : {
-    "2O4xJbcD5AtQlE8FFHH2O$$EHclTeJ1uACfDe-OJNxUh" : {
-      "id" : "2O4xJbcD5AtQlE8FFHH2O$$EHclTeJ1uACfDe-OJNxUh",
-      "component" : "Script",
-      "metadata" : {
-        "label" : "print_test_message",
-        "slug" : "print_test_message",
-        "x" : -960,
-        "y" : -320,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Outputs a test message to confirm system functionality.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : true,
-        "autoUpdateOnRun" : true
-      },
-      "properties" : {
-        "script" : "print(\"test job databricks\")",
-        "scriptMethodHeader" : "def Script(spark: SparkSession) -> None:",
-        "scriptMethodFooter" : "    return "
-      }
-    },
     "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT" : {
       "id" : "rN_36fhuKmOu5Cx2Pw5ev$$CaAFmYDDxqTyjvVAR9YPT",
       "component" : "Limit",
       "metadata" : {
         "label" : "limit_100_rows",
         "slug" : "limit_100_rows",
-        "x" : -880,
-        "y" : -520,
+        "x" : -680,
+        "y" : -800,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -201,8 +200,8 @@
       "metadata" : {
         "label" : "Filter_1",
         "slug" : "Filter_1",
-        "x" : -1040,
-        "y" : -480,
+        "x" : -860,
+        "y" : -960,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -264,8 +263,8 @@
       "metadata" : {
         "label" : "seed1_1",
         "slug" : "seed1_1",
-        "x" : -1220,
-        "y" : -460,
+        "x" : -1060,
+        "y" : -1000,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -291,13 +290,13 @@
       "metadata" : {
         "label" : "tgt",
         "slug" : "tgt",
-        "x" : -720,
-        "y" : -540,
+        "x" : -380,
+        "y" : -820,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Saves the processed data into a central business table for reporting and analysis.",
+        "comment" : "Adds new business records to a central reporting table for future analysis.",
         "autoUpdateComment" : true
       },
       "ports" : {

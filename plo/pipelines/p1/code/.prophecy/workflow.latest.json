@@ -1,0 +1,405 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "9.1.0",
+        "pyPiVersion" : "2.1.10"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/p1",
+    "sourceSuggestions" : [ ],
+    "pipelineSettingsInfo" : {
+      "applicationName" : "p1",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "30674",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "gayushprophecyioteam.ppp.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "super1",
+          "kind" : {
+            "type" : "string",
+            "value" : "super1"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "super2",
+          "kind" : {
+            "type" : "string",
+            "value" : "super2"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "sub1",
+          "kind" : {
+            "type" : "string",
+            "value" : "sub1"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "sub2",
+          "kind" : {
+            "type" : "string",
+            "value" : "sub2"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "super1",
+            "kind" : {
+              "type" : "string",
+              "value" : "super1"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "super2",
+            "kind" : {
+              "type" : "string",
+              "value" : "super2"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "super1" : "super1",
+            "super2" : "super2"
+          },
+          "prod" : {
+            "super1" : "super12"
+          }
+        }
+      },
+      "selectedProjectConfig" : "prod"
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "p1",
+    "configTopLevelPackage" : "p1",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "i9MSS6sI3WdiGjW7Ijwxm$$6JXcV_LFr14o5q57DpfwR",
+    "source" : "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U",
+    "sourcePort" : "OyUWHEOpLNE9wdIpADCxp$$mOE02LsnWOa3sWaE3Yy3A",
+    "target" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+    "targetPort" : "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ"
+  }, {
+    "id" : "vtGhXDXr0YA5UrNqw3-HP$$WtYpUmCmN6YCLxNxZUveQ",
+    "source" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+    "sourcePort" : "YZFbkKcvCgmc58qg-hDlF$$IMeoZtKldPgBmqdxtKZzt",
+    "target" : "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY",
+    "targetPort" : "AXLJ01bZjCdo8LJ0PynyQ$$vcSLVMyoKKFPBrxfa3kwS"
+  } ],
+  "processes" : {
+    "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz" : {
+      "id" : "zPxq5c0vmWBJie_d1WL62$$65cSZVvmI9A3gT9Og9Tmz",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformatted_rows_with_config_literals",
+        "slug" : "reformatted_rows_with_config_literals",
+        "x" : -360,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Adds configuration literals to each row alongside existing columns for enhanced executability or auditing.",
+        "autoUpdateComment" : true,
+        "dataPreview" : false,
+        "showRecordsCount" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First string value; represents the primary identifier or category in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second string value; provides an accompanying label or descriptor.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "YZFbkKcvCgmc58qg-hDlF$$IMeoZtKldPgBmqdxtKZzt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "sup1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$super1'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sup2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$super2'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sub1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$sub1'"
+          },
+          "description" : ""
+        }, {
+          "target" : "sub2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "'$sub2'"
+          },
+          "description" : ""
+        }, {
+          "target" : "col1",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col1"
+          },
+          "description" : ""
+        }, {
+          "target" : "col2",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "col2"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col1", "AWpacnJMLrLt7Sk3K-EKp$$Cggf7lo7ISJr3ykkj3KKJ##col2" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.55&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U" : {
+      "id" : "Qy4-KCOMJS1uBefgkStZV$$8_0YvaGoUUTz87tL-5c8U",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "vfv",
+        "slug" : "vfv",
+        "x" : -540,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "OyUWHEOpLNE9wdIpADCxp$$mOE02LsnWOa3sWaE3Yy3A",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/vfv"
+      }
+    },
+    "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY" : {
+      "id" : "5Sido0sFecWkyvBXULN_A$$tHNj7jP7D-2ekrm2o2hkY",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "rwg",
+        "slug" : "rwg",
+        "x" : -200,
+        "y" : -260,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AXLJ01bZjCdo8LJ0PynyQ$$vcSLVMyoKKFPBrxfa3kwS",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "sup1",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sup2",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sub1",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sub2",
+              "type" : "string",
+              "nullable" : false,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "First string value; represents the primary identifier or category in this dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col2",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Second string value; provides an accompanying label or descriptor.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/rwg"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

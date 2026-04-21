@@ -1,0 +1,47 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: sup1
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sup2
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sub1
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: sub2
+    type: string
+    nullable: false
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: col1
+    type: string
+    nullable: true
+    metadata:
+      description: First string value; represents the primary identifier or category
+        in this dataset.
+      mappings: []
+      tags: []
+  - name: col2
+    type: string
+    nullable: true
+    metadata:
+      description: Second string value; provides an accompanying label or descriptor.
+      mappings: []
+      tags: []
