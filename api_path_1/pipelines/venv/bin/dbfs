@@ -1,0 +1,6 @@
+#!/Users/ayushgupta/Documents/Loop-Restaurant-Tracking/api_path_1/pipelines/venv/bin/python3.12
+import sys
+from databricks_cli.dbfs.cli import dbfs_group
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(dbfs_group())
