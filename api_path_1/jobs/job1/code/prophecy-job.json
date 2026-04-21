@@ -1,0 +1,97 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "27664",
+    "jobId" : "jobs/job1",
+    "name" : "job1",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    }
+  },
+  "processes" : {
+    "ziudM-7xdfrI0-ts5K9Cc$$MajCWNmxiq8v_sV_UaVtc" : {
+      "id" : "ziudM-7xdfrI0-ts5K9Cc$$MajCWNmxiq8v_sV_UaVtc",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "p1",
+        "slug" : "p1",
+        "x" : -560,
+        "y" : -420
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "W87UqBqzjOITKATq_lanc$$0AG7zQj8eoL-eFghkn0t1",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "wr0SF66Y282ehB8gJ-PMy$$mngxV7WxoXI7JX2_kkqDs",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false,
+          "onDurationWarningThresholdExceeded" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false,
+        "onDurationWarningThresholdExceeded" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/p1",
+        "configurations" : {
+          "selectedInstance" : "default",
+          "instances" : {
+            "spark_project_api_new" : [ "default" ]
+          },
+          "overrides" : { },
+          "schema" : [ ]
+        },
+        "projectId" : "186502"
+      },
+      "conditional" : {
+        "runIf" : "ALL_SUCCESS",
+        "forEach" : false,
+        "forEachConfig" : "",
+        "forEachConcurrency" : 1,
+        "forEachInputVariable" : "",
+        "forEachIterationCount" : null
+      },
+      "parent" : null
+    }
+  },
+  "connections" : [ ]
+}
